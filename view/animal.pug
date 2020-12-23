@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title animal
+    body
+        a(href="http://localhost:3000") HOME
+        hr
+        if animal
+            h1 ADDED ANIMAL
+            hr
+            h3 #{animal.name}
+            br
+        a(href="http://localhost:3000/animal/all") All Animals 
+        br
+        a(href="http://localhost:3000/animal/firstFive") First 5 Animals
+        if animals
+            p Current Animals
+            table
+                thead
+                    tr
+                        th Name
+                        th No. Legs
+                        th Has Wings
+                tbody
+                    each val in animals
+                        tr
+                            td #{val.name}
+                            td #{val.legsCount}
+                            td #{val.hasWings}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home
+    body
+        h1 Docker Lesson
+        br
+        div
+            a(href="http://localhost:3000/fruit") Add fruits
+        hr
+        h1 Add Animal:
+        div(style="border:1px solid black;")
+            form(action="http://localhost:3000/animal/add", method="post")
+                label(for="name") Name 
+                input(type="text", name="name")
+                br
+                label(for="legsCount") Number of Legs 
+                input(type="number", name="legsCount")
+                br
+                label(for="hasWings") Has Wings: 
+                select(name="hasWings")
+                    option(value="true") true
+                    option(value="false") false
+                hr
+                button(type="submit") Add Animal
+        br
+        
+                
+            
+            

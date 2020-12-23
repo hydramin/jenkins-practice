@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Fruit
+    body
+        a(href="http://localhost:3000/") Home
+        h1 Add Fruit Page
+        form(action="/fruit", method="post")
+            span Fruit: 
+            input(type="text", name="name")
+            br
+            button(type="submit") Add
+        hr
+        br
+        each fruit in f
+            p #{fruit.name}
